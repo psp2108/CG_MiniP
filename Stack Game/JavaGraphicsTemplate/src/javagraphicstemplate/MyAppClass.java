@@ -206,7 +206,7 @@ class MyAppClass extends JComponent {
 
     //It draws the score message when the game is over
     public void drawScore(Graphics g) {
-
+        Color tempc = g.getColor();
         g.setColor(Color.BLACK);
         Font initialFont = g.getFont();
         String tempScore = "Your Score is: " + score;
@@ -215,6 +215,7 @@ class MyAppClass extends JComponent {
 
         g.drawString(tempScore, (this.getWidth() - metrics.stringWidth(tempScore)) / 2, 50);
 
+        g.setColor(tempc);
     }
 
     public void paint(Graphics g) {
@@ -250,6 +251,7 @@ class MyAppClass extends JComponent {
         if (!gameOver) {    //Checks the game over flag
             //If game is not over draw the moving ship and the moving object is rectangle in shape
             g.fillRect(myShip.returnx(), myShip.returny(), defaultWidth, defaultHeight);
+            drawScore(g);
         } else {
             //If game is over the display game over message and score
             drawGameOver(g);
