@@ -240,9 +240,9 @@ class MyAppClass extends JComponent {
         xc += directionx;
 
         /////////////////////////////////////////////////////////////////////
-        if(xc == (this.getWidth() - defaultWidth) / 2){
-            W_Clicked = true;
-        }
+//        if(xc == (this.getWidth() - defaultWidth) / 2){
+//            W_Clicked = true;
+//        }
         /////////////////////////////////////////////////////////////////////
         
         myShip.move(xc, baseHeight - defaultHeight);
