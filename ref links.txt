@@ -1,3 +1,5 @@
 https://stackoverflow.com/questions/6118737/how-to-draw-in-jpanel-swing-graphics-java
 
 https://www.javacodex.com/More-Examples/2/4
+
+https://stackoverflow.com/questions/18416342/java-netbeans-override-paint-method-in-a-jpanel
