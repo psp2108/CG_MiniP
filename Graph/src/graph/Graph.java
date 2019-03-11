@@ -16,7 +16,7 @@ import javax.swing.*;
  */
 public class Graph extends JFrame {
 
-    JPanel panel = null;
+    DrawPanel panel = null;
 
     Graph() {
         this.setSize(300, 200);
@@ -35,7 +35,11 @@ public class Graph extends JFrame {
         b.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                Graphics g = panel.getCurrentGraphics();
+                g.setColor(Color.GREEN);
+                g.fillOval(110,10,50,50);
+                panel.revalidate();
+                System.out.println("Button Clicked");
             }
         });
     }

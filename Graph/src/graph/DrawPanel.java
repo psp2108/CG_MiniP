@@ -14,7 +14,8 @@ import javax.swing.border.Border;
  * @author Pratik Panchal
  */
 class DrawPanel extends JPanel {
-
+    Graphics g = null;
+    
     DrawPanel() {
         super();
         this.setBackground(Color.WHITE);
@@ -31,5 +32,10 @@ class DrawPanel extends JPanel {
 //        g.fillRect(0, 0, this.getWidth(), this.getHeight());
         g.setColor(Color.RED);
         g.fillRect(10, 10, 100, 100);
+        this.g = g;
+    }
+    
+    Graphics getCurrentGraphics(){
+        return this.g;
     }
 }
